@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 
 public class MCToast implements ModInitializer {
 	public static final String MOD_ID = "mctoast";
+	public static final String MOD_NAME = "MCToast";
+	public static final String MOD_VERSION = "0.1.0";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -15,10 +17,7 @@ public class MCToast implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info(String.format("[%s] with mod ID [%s] version [%s] has initialized",
+				MOD_NAME, MOD_ID, MOD_VERSION));
 	}
 }
